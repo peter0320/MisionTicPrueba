@@ -1,0 +1,15 @@
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.deps.json
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.dll
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.pdb
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Dominio.dll
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Persistencia.dll
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Persistencia.pdb
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\bin\Debug\netstandard2.1\ProyectoCiclo3.App.Dominio.pdb
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.csproj.AssemblyReference.cache
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.AssemblyInfoInputs.cache
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.AssemblyInfo.cs
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.csproj.CoreCompileInputs.cache
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.csproj.CopyComplete
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.dll
+C:\Users\NahelC\Documents\ProyectoCiclo3.App\ProyectoCiclo3.App.Consola\obj\Debug\netstandard2.1\ProyectoCiclo3.App.Consola.pdb
