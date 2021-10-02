@@ -1,34 +1,44 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListUsuarioModel
 @{
+  
 }
- 
+
+ <h2 class="align-center">Listado de Usuarios</h2>
 <table class="table table-hover">
+  <!-- Encabezado de nuestra lista de Usuarios -->
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">direccion</th>
+      <th scope="col">telefono</th>
     </tr>
+
   </thead>
+
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>Facebook</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Arias</td>
-      <td>Instagram</td>
-    </tr>
+
+     @foreach (var user in Model.Usuario)
+      {
+        <tr>
+            <td>@user.id</td>
+            <td>@user.nombre</td>
+            <td>@user.apellidos</td>
+            <td>@user.direccion</td>
+            <td>@user.telefono</td>
+           
+            <td>
+
+              <a class="btn btn-info" asp-page="../Details" asp-route-userId="@user.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" asp-page="./Edit" asp-route-userId="@user.id">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+      }
+
+    
   </tbody>
 </table>

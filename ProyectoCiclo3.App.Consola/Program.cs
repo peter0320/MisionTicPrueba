@@ -1,4 +1,5 @@
 ﻿using System;
+using ProyectoCiclo3.App.Dominio;
 
 namespace ProyectoCiclo3.App.Consola
 {
