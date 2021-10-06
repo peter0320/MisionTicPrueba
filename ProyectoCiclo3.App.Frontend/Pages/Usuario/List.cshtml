@@ -4,17 +4,21 @@
   
 }
 
- <h2 class="align-center">Listado de Usuarios</h2>
+<h2 align="center">Lista de Usuarios</h2>
+<a class="btn btn-success" align="center" asp-page="/Usuario/Create" >Crear Usuario <i class="fa fa-plus"></i></a>
+
 <table class="table table-hover">
   <!-- Encabezado de nuestra lista de Usuarios -->
   <thead>
     <tr>
-      
       <th scope="col">id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">direccion</th>
       <th scope="col">telefono</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Opciones</th>
+     <hr>
     </tr>
 
   </thead>
@@ -29,16 +33,19 @@
             <td>@user.apellidos</td>
             <td>@user.direccion</td>
             <td>@user.telefono</td>
+            <td>@user.ciudad</td>
            
-            <td>
-
-              <a class="btn btn-info" asp-page="../Details" asp-route-userId="@user.id"><i class="fas fa-adjust"></i>Ver</a>
+              <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-userId="@user.id">Ver</a>
               <a class="btn btn-info" asp-page="./Edit" asp-route-userId="@user.id">Editar</a>
-              <a class="btn btn-danger" href="">Eliminar</a>
+              
+              <form method="POST">
+              <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@user.id">
+              <button type="submit"class="btn btn-danger" href="">Eliminar</button>
+              </form>
               </td>
+
         </tr>
       }
-
-    
   </tbody>
 </table>

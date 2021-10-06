@@ -10,4 +10,10 @@
   <li class="list-group-item"> <b>Apellido: </b> @user.apellidos</li>
   <li class="list-group-item"> <b>Direccion: </b> @user.direccion</li>
   <li class="list-group-item"> <b>Telefono: </b> @user.telefono</li>  
+  <li class="list-group-item"> <b>Ciudad: </b> @user.ciudad</li>  
+
 </ul>	
+
+<a class="btn btn-info" asp-page="./Edit" asp-route-userId="@user.id">Editar</a>
+
+<a class="btn btn-primary" asp-page="/Usuario/List" >Volver</a>

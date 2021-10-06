@@ -4,7 +4,10 @@
     var user = Model.User;
 }
  
-<div class="text-center">
+
+ <h1 align="center">Editar Informacion de Usuario</h1>
+<div class="text-justify">
+
 <form  method="post">
  <label for="id" class="form-label">id:</label>  
   <input type="number" class="form-control" class="d-none" id="id" name="id" placeholder="id" asp-for="@user.id">
@@ -20,6 +23,10 @@
   
   <label for="Telefono" class="form-label">Telefono:</label>
   <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" asp-for="@user.telefono">
+
+  <label for="ciudad" class="form-label">Ciudad:</label>
+  <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" asp-for="@user.ciudad">
+  
   
   <hr>
 
