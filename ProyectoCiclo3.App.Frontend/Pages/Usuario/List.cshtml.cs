@@ -31,13 +31,13 @@ namespace ProyectoCiclo3.App.Frontend.Pages
 
 
     public IActionResult OnPost()
-    {
-        if(User.id>0)
+    {        
+       if(User.id>0)
         {
-        User = repositorioUsuario.Delete(User.id);
+       repositorioUsuario.Delete(User.id);
         }
-        return RedirectToPage("./List");
-    }
+        return RedirectToPage("./List"); 
+    } 
 
    }
    
