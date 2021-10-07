@@ -1,13 +1,13 @@
 @page
 @model ProyectoCiclo3.App.Frontend.Pages.ListUsuarioModel
 @{
-  
+   ViewData["Title"] = "lista de Usuarios";
 }
 
-<h2 align="center">Lista de Usuarios</h2>
+<h2 align="center"  class="text-secondary">Lista de Usuarios</h2>
 <a class="btn btn-success" align="center" asp-page="/Usuario/Create" >Crear Usuario <i class="fa fa-plus"></i></a>
 
-<table class="table table-hover">
+<table class="table table-hover table-striped table-bordered table-hover text-info" style="width: 100%">
   <!-- Encabezado de nuestra lista de Usuarios -->
   <thead>
     <tr>
