@@ -1,0 +1,31 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.FormEncomiendaModel
+@{
+
+} 
+
+ <h1 align="center">Formulario Creación de Encomiendas</h1>
+
+
+  <div class="text-justify">
+
+  <form method="POST">
+ 
+  <label for="descripcion" class="form-label">Descripcion Producto:</label>
+  <input type="text" class="form-control" id="descripcion"  placeholder="Descripcion" asp-for="Encomienda.descripcion" required>
+ 
+  <label for="peso" class="form-label">Peso:</label>
+  <input type="number" class="form-control" id="peso" placeholder="Peso en kilos" asp-for="Encomienda.peso" required>
+
+  <label for="tipo" class="form-label">Tipo:</label>
+  <input type="text" class="form-control" id="tipo"  placeholder="Tipo Encomienda" asp-for="Encomienda.tipo " required>
+  
+  <label for="presentacion" class="form-label">Presentacion:</label>
+  <input type="text" class="form-control" id="presentacion"  placeholder="Presentacion" asp-for="Encomienda.presentacion" required>
+
+  
+  <hr>
+  <button type="submit" class="btn btn-success">Enviar</button>
+  
+  </form>
+  </div>

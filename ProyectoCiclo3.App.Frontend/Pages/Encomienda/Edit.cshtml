@@ -1,0 +1,32 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.EditEncomiendaModel
+@{
+    ViewData["Title"] = "Formulario de Edicion de Encomienda";
+    var enco = Model.Enco;
+}
+ 
+
+ <h1 align="center">Editar Informacion de Usuario</h1>
+<div class="text-justify">
+
+<form  method="post">
+ <label for="id" class="form-label">id:</label>  
+  <input type="number" class="form-control" class="d-none" id="id" name="id" placeholder="id" asp-for="@enco.id">
+  
+  <label for="descripcion" class="form-label">Descripcion:</label>  
+  <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion"  asp-for="@enco.descripcion">
+  
+  <label for="peso" class="form-label">Peso:</label>  
+  <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso Encomienda" asp-for="@enco.peso">
+  
+  <label for="tipo" class="form-label">Tipo Encomieda:</label>
+  <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo Encomienda" asp-for="@enco.tipo">
+  
+  <label for="Presentacion" class="form-label">Presentacion:</label>
+  <input type="text" class="form-control" id="presentacion" name="presentacion" placeholder="Presentacion" asp-for="@enco.presentacion">
+  <hr>
+
+      <button type="submit" class="btn btn-success">Enviar</button>
+
+</form>
+</div>
