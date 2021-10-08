@@ -1,0 +1,55 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.EditServicioModel
+@{
+      var services = Model.Services;
+      
+} 
+
+ <h1 align="center">Formulario Edicion  de Servicio</h1>
+
+
+  <div class="text-justify">
+
+  <form method="POST">
+
+  <label for="id" class="form-label">id:</label>  
+  <input type="number" class="form-control" class="d-none" id="id" name="id" placeholder="id" asp-for="@services.id">
+ 
+ @* <label for="descripcion" class="form-label">Usuario Origen :</label>
+  <select asp-for="Servicio.origen" id="origen" name="origen" class="form-control" asp-for="services.origen" >
+        <option value="">-</option>
+        @foreach (var usuario in Model.Usuarios)
+    {
+        <option value="@usuario.id">@usuario.nombre @usuario.apellidos - @usuario.ciudad</option>
+    }
+    </select>  *@
+
+  @* <label for="usuario destino" class="form-label">Usuario Destino:</label>
+  <select asp-for="Servicio.destino" id="destino" name="destino" class="form-control">
+        <option value="">-</option>
+        @foreach (var usuario in Model.Usuarios)
+    {
+        <option value="@usuario.id">@usuario.nombre @usuario.apellidos - @usuario.ciudad</option>
+    }
+    </select> *@
+
+  <label for="tipo" class="form-label">Fecha:</label>
+  <input type="Date" class="form-control" id="fecha" name="fecha"   asp-for="@services.fecha"> 
+
+  <label for="tipo" class="form-label">Fecha:</label>
+  <input type="Time" class="form-control" id="hora" name="hora"  asp-for="@services.hora">
+
+    <label for="encomienda" class="form-label">Encomienda:</label>
+ @*  <select asp-for="Servicio.encomienda" id="encomienda" name="encomienda" class="form-control" >
+        <option value="">-</option>
+        @foreach (var encomienda in Model.Encomiendas)
+    {
+        <option value="@encomienda.id">@encomienda.descripcion</option>
+    }
+    </select> *@
+
+  <hr>
+  <button type="submit" class="btn btn-success">Enviar</button>
+  
+  </form>
+  </div>

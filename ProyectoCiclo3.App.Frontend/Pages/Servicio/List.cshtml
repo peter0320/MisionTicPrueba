@@ -1,11 +1,11 @@
 @page
-@model ProyectoCiclo3.App.Frontend.Pages.ListEncomiendaModel
+@model ProyectoCiclo3.App.Frontend.Pages.ListServicioModel
 @{
-   ViewData["Title"] = "lista de Encomienda";
+   ViewData["Title"] = "lista de Servicio";
 }
 
-<h2 align="center" class="text-secondary">Listado de Encomienda</h2>
-<a class="btn btn-success" align="center" asp-page="/Encomienda/Create" >Crear Encomienda <i class="fa fa-plus"></i></a>
+<h2 align="center" class="text-secondary">Listado de Servicios</h2>
+<a class="btn btn-success" align="center" asp-page="/Servicio/Create" >Crear Servicio <i class="fa fa-plus"></i></a>
 
 <table class="table table-hover table-striped table-bordered table-hover text-info" style="width: 100%">
   <!-- Encabezado de nuestra lista de Usuarios -->
@@ -14,8 +14,10 @@
       <th scope="col">id</th>
       <th scope="col">Origen</th>
       <th scope="col">Destino</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Presentacion</th>      
+      <th scope="col">Fecha Envio</th>
+      <th scope="col">Hora Envio</th>      
+      <th scope="col">Encomienda</th> 
+
       <th scope="col">Acciones</th>
      <hr>
     </tr>
@@ -24,21 +26,22 @@
 
   <tbody>
 
-     @foreach (var encomienda in Model.Encomienda)
+     @foreach (var servicio in Model.Servicio)
       {
         <tr>
-            <td>@encomienda.id</td>
-            <td>@encomienda.descripcion</td>
-            <td>@encomienda.peso</td>
-            <td>@encomienda.tipo</td>
-            <td>@encomienda.presentacion</td>
+            <td>@servicio.id</td>
+            <td>@servicio.origen</td>
+            <td>@servicio.destino</td>
+            <td>@servicio.fecha</td>
+            <td>@servicio.hora</td>
+            <td>@servicio.encomienda</td>
                    
               <td>
-              <a class="btn btn-info" asp-page="./Details" asp-route-encomiendaId="@encomienda.id">Ver</a>
-              <a class="btn btn-info" asp-page="./Edit" asp-route-encomiendaId="@encomienda.id">Editar</a>
+              <a class="btn btn-info"  asp-page="./Details" asp-route-servicioId="@servicio.id" >Ver</a>
+              <a class="btn btn-info"  asp-page="./Edit" asp-route-servicioId="@servicio.id">Editar</a>
              
               <form align="rigth" method="POST">
-              <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@encomienda.id">
+              <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@servicio.id">
               <button type="submit"class="btn btn-danger" href="">Eliminar</button>
               </form>
               </td>
