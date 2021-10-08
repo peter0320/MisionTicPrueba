@@ -7,8 +7,7 @@ namespace ProyectoCiclo3.App.Persistencia
 {
     public class AppContext: DbContext{
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Encomienda> Encomiendas { get; set; }
-
+        public DbSet<Encomienda> Encomiendas { get; set; }        
         public DbSet<Servicio> Servicios { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if(!optionsBuilder.IsConfigured){

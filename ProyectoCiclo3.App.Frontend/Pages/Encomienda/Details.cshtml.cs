@@ -11,18 +11,15 @@ namespace ProyectoCiclo3.App.Frontend.Pages
 {
     public class DetailsEncomiendaModel : PageModel
     {
-       private readonly RepositorioEncomienda repositorioEncomienda;
-      
-       public Encomienda Commend {get;set;}
- 
+     private readonly RepositorioEncomienda repositorioEncomienda;
+          public Encomienda Comment {get;set;} 
         public DetailsEncomiendaModel(RepositorioEncomienda repositorioEncomienda)
        {
             this.repositorioEncomienda=repositorioEncomienda;
-       }
- 
-        public IActionResult OnGet(int commendId)
+       } 
+        public IActionResult OnGet(int encomiendaId)
         {
-                Commend=repositorioEncomienda.GetEncomiendaWithId(commendId);
+                Comment=repositorioEncomienda.GetEncomiendaWithId(encomiendaId);
                 return Page();
  
         }

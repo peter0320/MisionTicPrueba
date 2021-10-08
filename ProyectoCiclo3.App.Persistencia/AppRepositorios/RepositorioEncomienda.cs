@@ -10,8 +10,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         List<Encomienda> Encomiendas;
 
     private readonly AppContext _appContext = new AppContext();
- 
-            public IEnumerable<Encomienda> GetAll()
+    public IEnumerable<Encomienda> GetAll()
         {
             //trae todos los usuarios de la base de datos
             return _appContext.Encomiendas;
@@ -22,20 +21,19 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         } 
 
         public Encomienda Update(Encomienda NewEncomienda){
-
             var encomienda = _appContext.Encomiendas.Find(NewEncomienda.id);
            
             if(encomienda != null){
+                
                 encomienda.descripcion = NewEncomienda.descripcion;
                 encomienda.peso = NewEncomienda.peso;
                 encomienda.tipo = NewEncomienda.tipo;
                 encomienda.presentacion = NewEncomienda.presentacion;
                 //guardar en al base de datos
-                 _appContext.SaveChanges();
-                
+                 _appContext.SaveChanges();                
             }
-        return encomienda;
-        
+            
+        return encomienda;        
         }
 
         public Encomienda Create(Encomienda newEncomienda){
@@ -52,9 +50,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         {
         var encomienda = _appContext.Encomiendas.Find(id);
         if (encomienda == null)
-
         return;
-
         _appContext.Encomiendas.Remove(encomienda);
         _appContext.SaveChanges();
 

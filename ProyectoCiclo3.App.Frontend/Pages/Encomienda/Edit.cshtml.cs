@@ -20,9 +20,9 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             this.repositorioEncomienda=repositorioEncomienda;
        }
  
-        public IActionResult OnGet(int encoId)
+        public IActionResult OnGet(int encomiendaId)
         {
-            Enco=repositorioEncomienda.GetEncomiendaWithId(encoId);
+            Enco=repositorioEncomienda.GetEncomiendaWithId(encomiendaId);
             return Page();
  
         }
