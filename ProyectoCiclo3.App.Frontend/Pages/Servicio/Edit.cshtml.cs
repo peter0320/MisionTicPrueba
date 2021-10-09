@@ -40,6 +40,8 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         {
                           
             Services=repositorioServicio.GetServicioWithId(servicioId);
+            Usuarios=repositorioUsuario.GetAll();
+            Encomiendas=repositorioEncomienda.GetAll();
             return Page();
  
         }

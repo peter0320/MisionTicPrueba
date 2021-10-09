@@ -8,23 +8,23 @@
 
  <h1 align="center">Editar Informacion de Usuario</h1>
 <div class="text-justify">
-
+<br>
 <form  method="post">
  <label for="id" class="form-label">id:</label>  
   <input type="number" class="form-control" class="d-none" id="id" name="id" placeholder="id" asp-for="@user.id">
-  
+  <br>
   <label for="Nombre" class="form-label">Nombre:</label>  
   <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" asp-for="@user.nombre">
-  
+  <br>
   <label for="Apellidos" class="form-label">Apellidos:</label>  
   <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" asp-for="@user.apellidos">
-  
+  <br>
   <label for="Direccion" class="form-label">direccion:</label>
   <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Tireccion" asp-for="@user.direccion">
-  
+  <br>
   <label for="Telefono" class="form-label">Telefono:</label>
   <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" asp-for="@user.telefono">
-
+ <br>
   <label for="ciudad" class="form-label">Ciudad:</label>
   <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" asp-for="@user.ciudad">
   
@@ -32,6 +32,7 @@
   <hr>
 
       <button type="submit" class="btn btn-success">Enviar</button>
+      <a class="btn btn-primary" asp-page="/Usuario/List" >Volver</a>
 
 </form>
 </div>

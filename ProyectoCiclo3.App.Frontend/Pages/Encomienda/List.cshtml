@@ -34,9 +34,10 @@
             <td>@encomienda.presentacion</td>
                    
               <td>
-              <a class="btn btn-info" asp-page="./Details" asp-route-encomiendaId="@encomienda.id">Ver</a>
-              <a class="btn btn-info" asp-page="./Edit" asp-route-encomiendaId="@encomienda.id">Editar</a>
-             
+              <a class="btn btn-info" asp-page="./Details" asp-route-encomiendaId="@encomienda.id">Detalle</a>
+              <a class="btn btn-primary" asp-page="./Edit" asp-route-encomiendaId="@encomienda.id">Editar</a>
+             </td>
+             <td>
               <form align="rigth" method="POST">
               <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@encomienda.id">
               <button type="submit"class="btn btn-danger" href="">Eliminar</button>

@@ -10,7 +10,8 @@
   <div class="text-justify">
 
   <form method="POST">
- 
+    
+    <br>
   <label for="descripcion" class="form-label">Usuario Origen :</label>
   <select asp-for="Servicio.origen" class="form-control">
         <option value="">-</option>
@@ -20,6 +21,7 @@
     }
     </select>
 
+    <br>
   <label for="usuario destino" class="form-label">Usuario Destino:</label>
   <select asp-for="Servicio.destino" class="form-control">
         <option value="">-</option>
@@ -29,13 +31,13 @@
     }
     </select>
   
-
+   <br>
   <label for="tipo" class="form-label">Fecha:</label>
   <input type="Date" class="form-control" id="fecha"   asp-for="Servicio.fecha " required> 
-
-  <label for="tipo" class="form-label">Fecha:</label>
+   <br>
+  <label for="tipo" class="form-label">Hora de envio:</label>
   <input type="Time" class="form-control" id="hora"   asp-for="Servicio.hora " required>
-
+   <br>
     <label for="usuario destino" class="form-label">Usuario Destino:</label>
   <select asp-for="Servicio.encomienda" class="form-control">
         <option value="">-</option>
@@ -47,6 +49,9 @@
   
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
+
+  <a class="btn btn-primary" asp-page="/Servicio/List" >Volver</a>
+  
   
   </form>
   </div>

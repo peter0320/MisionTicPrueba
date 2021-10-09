@@ -6,30 +6,37 @@
  
  
 
- <h1 align="center">Formulario Creacion de Usuarios</h1>
+ <h1 align="center" class="text-secondary">Formulario Creacion de Usuarios</h1>
 
 
   <div class="text-justify">
 
   <form method="POST">
- 
+  
+  <br>
   <label for="nombre" class="form-label">Digite Nombre:</label>
   <input type="text" class="form-control" id="nombre"  placeholder="Nombre" asp-for="Usuario.nombre" required>
- 
+  
+  <br>
   <label for="apellidos" class="form-label">Digite Apellidos:</label>
   <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" asp-for="Usuario.apellidos" required>
-
+   
+   <br/>
   <label for="direccion" class="form-label">Digite Direccion:</label>
   <input type="text" class="form-control" id="direccion"  placeholder="Dirección" asp-for="Usuario.direccion" required>
-  
+ 
+  <br>
   <label for="telefono" class="form-label">Digite Telefono:</label>
   <input type="text" class="form-control" id="telefono"  placeholder="Telefono" asp-for="Usuario.telefono"  minlength="8" required>
-
+  
+  <br>
   <label for="ciudad" class="form-label">Ciudad:</label>
   <input type="text" class="form-control" id="ciudad"  placeholder="Ciudad" asp-for="Usuario.ciudad" required>
   
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
+
+  <a class="btn btn-primary" asp-page="/Usuario/List" >Volver</a>
   
   </form>
   </div>

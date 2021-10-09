@@ -9,7 +9,7 @@
  
 <div class="text-justify">
 
-<form  method="post">
+<form  method="post" class="form-fluid">
  <label for="id" class="form-label">id:</label>  
   <input type="number" class="form-control" class="d-none" id="id" name="id" placeholder="id" asp-for="@enco.id">
   
@@ -28,6 +28,7 @@
   <hr>
 
       <button type="submit" class="btn btn-success">Enviar</button>
+      <a class="btn btn-primary" asp-page="/Encomienda/List" >Volver</a>
 
 </form>
 </div>
