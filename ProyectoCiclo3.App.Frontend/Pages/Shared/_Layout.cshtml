@@ -10,13 +10,28 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-1">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-danger border-bottom box-shadow mb-12">
             
             <div class="container">
+
+                
+
+                
                 <a class="navbar-brand" asp-area="" asp-page="/Index">NCEnvios <i class="fas fa-space-shuttle"></i> </a>
+
+                
                
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
+                   
+                   
+
+                    @using Microsoft.AspNetCore.Identity
+                    @inject SignInManager<IdentityUser> SignInManager
+                    @if (SignInManager.IsSignedIn(User))
+                    {
                     <ul class="navbar-nav flex-grow-1">
+
+
                         
                         <li class="nav-item  dropdown">
                             <a class="nav-link text-white active " asp-area="" asp-page="/Index"> 
@@ -58,9 +73,18 @@
                              <div class="dropdown-menu">
                               <a class="dropdown-item" asp-page="/Servicio/Create">Crear Envios <i class="fas fa-shipping-fast"></i> </a>
                                <a class="dropdown-item" asp-page="/Servicio/List">Listado de Servicios  <i class="fas fa-list-alt"></i>  </a>  
-                             </div>                 
+                             </div>  
+
                            </li>
-                      </div>                   
+
+                               
+
+                            </ul> 
+                      } 
+
+                      <span class="text-white">@Html.Partial("_LoginPartial")</span> 
+
+                      </div>                                     
               </div>  
         </nav>
     </header>

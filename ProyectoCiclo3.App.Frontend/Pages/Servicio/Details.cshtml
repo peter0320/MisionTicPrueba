@@ -6,11 +6,11 @@
  
 <ul class="list-group list-group-flush">
   <li class="list-group-item"> <b>id:</b> @servicio.id </li>
-  <li class="list-group-item"> <b>Origen:</b> @servicio.origen </li>
-  <li class="list-group-item"> <b>Destino:</b> @servicio.destino </li>
+  <li class="list-group-item"> <b>Origen:</b> @servicio.origen.nombre </li>
+  <li class="list-group-item"> <b>Destino:</b> @servicio.destino.nombre </li>
   <li class="list-group-item"> <b>Fecha de Envio:</b> @servicio.fecha </li>
   <li class="list-group-item"> <b>Hora de Envio:</b> @servicio.hora </li>  
-  <li class="list-group-item"> <b>Encomienda:</b> @servicio.encomienda </li>  
+  <li class="list-group-item"> <b>Encomienda:</b> @servicio.encomienda.descripcion </li>  
 </ul>	
 
 <a class="btn btn-info" asp-page="./Edit" asp-route-encomiendaId="@servicio.id">Editar</a>

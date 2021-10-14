@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using ProyectoCiclo3.App.Dominio;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore;
  
 namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
@@ -12,8 +13,10 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
     private readonly AppContext _appContext = new AppContext();
     public IEnumerable<Servicio> GetAll()
         {
-            //trae todos los usuarios de la base de datos
-            return _appContext.Servicios;
+            return _appContext.Servicios.Include(u => u.origen)
+                       .Include(u => u.destino).
+                       Include(e => e.encomienda);
+
         }
  
         public Servicio GetServicioWithId(int id){
@@ -37,12 +40,19 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         return servicio;        
         }
 
-        public Servicio Create(Servicio newServicio){
+        public Servicio Create(int origen, int destino, string fecha, string hora, int encomienda)
+        {
            
+            var newServicio = new Servicio();
+            newServicio.origen = _appContext.Usuarios.Find(origen);
+            newServicio.destino = _appContext.Usuarios.Find(destino);
+            newServicio.fecha = fecha;
+            newServicio.hora = hora;
+            newServicio.encomienda = _appContext.Encomiendas.Find(encomienda);
             var addServicio = _appContext.Servicios.Add(newServicio);
             _appContext.SaveChanges();
-            return addServicio.Entity;//retorna el usuario que acaba de crear
-           
+
+            return addServicio.Entity;          
            
            }
 

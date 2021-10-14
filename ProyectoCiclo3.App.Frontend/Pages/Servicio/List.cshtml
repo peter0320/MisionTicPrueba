@@ -30,11 +30,11 @@
       {
         <tr>
             <td>@servicio.id</td>
-            <td>@servicio.origen</td>
-            <td>@servicio.destino</td>
+            <td>@servicio.origen.nombre</td>
+            <td>@servicio.destino.nombre</td>
             <td>@servicio.fecha</td>
             <td>@servicio.hora</td>
-            <td>@servicio.encomienda</td>
+            <td>@servicio.encomienda.descripcion</td>
                    
               <td>
               <a class="btn btn-info"  asp-page="./Details" asp-route-servicioId="@servicio.id" >Detalle</a>

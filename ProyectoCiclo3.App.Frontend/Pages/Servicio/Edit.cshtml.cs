@@ -27,15 +27,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             this.repositorioEncomienda=repositorioEncomienda;
        }
 
-            
-             /* 
-            public void OnGet()
-             {
-                Usuarios=repositorioUsuario.GetAll();
-                Encomiendas=repositorioEncomienda.GetAll();
-                
-             } */
-
+           
         public IActionResult OnGet(int servicioId)
         {
                           
