@@ -9,7 +9,8 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class FormServicioModel : PageModel
+    
+     public class FormServicioModel : PageModel
     {
  
         private readonly RepositorioServicio repositorioServicio;

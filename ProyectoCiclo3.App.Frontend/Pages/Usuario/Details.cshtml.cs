@@ -9,7 +9,7 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class DetailsUsuarioModel : PageModel
+      public class DetailsUsuarioModel : PageModel
     {
        private readonly RepositorioUsuario repositorioUsuario;
        public Usuario User {get;set;}
